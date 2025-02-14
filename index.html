@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Particles</title>
+    <script src="https://cdn.jsdelivr.net/npm/nextparticle@latest"></script>
+    <style>
+        body { margin: 0; background: black; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        canvas { position: absolute; }
+    </style>
+</head>
+<body>
+    <img id="valentines" src="heart.png" style="display:none;">
+    <script>
+        const heart = new NextParticle({
+            renderer: 'webgl',
+            image: document.querySelector('#valentines'),
+            width: window.innerWidth,
+            height: window.innerHeight,
+            particleGap: 2,
+            particleSize: 2,
+            mouseForce: 100,
+            noise: 5,
+            layerCount: 3,
+            layerDistance: 5
+        });
+    </script>
+</body>
+</html>
